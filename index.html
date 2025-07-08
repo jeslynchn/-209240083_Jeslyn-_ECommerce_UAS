@@ -7,50 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Bagian Header untuk menandai judul dan subjudul dan memberikan informasi tentang struktur konten -->
     <header>
+        <!-- untuk menampilkan nama toko -->
         <div class="logo">
             <a href="index.html"><img src="company logo.JPG" alt="Company Logo"></a>
         </div>
+        
+         <!-- untuk navigasi menu -->
         <nav class="main-navigation">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a>
+                <li><a href="#">Produk</a></li>
                     <ul class="dropdown">
                         <li><a href="#">Moisturizer</a></li>
                         <li><a href="#">Micellar Water</a></li>
                         <li><a href="#">Sunscreen</a></li>
                     </ul>
-                </li>
-                
-                <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        
+        <!-- untuk mesin pencari -->
         <div class="search-bar">
             <input type="text" placeholder="Search products...">
             <button>🔍Search</button>
         </div>
+        
+        <!-- untuk login dan keranjang-->
         <div class="user-links">
             <a href="login.html">Login👤</a>
             <a href="Keranjang.html">🛒(0)</a></i></FONT>
         </div>
     </header>
 
-    <!-- Breadcrumbs -->
+    <!-- Breadcrumbs untuk membantu pengguna memahami lokasi mereka -->
     <nav class="breadcrumbs">
         <a href="index.html">Home</a> &gt; 
         <a href="#">Moisturizer</a> &gt; 
         <span>ALL</span>
     </nav>
 
-    <!-- Main Content -->
+    <!-- bagian Main Content untuk menandai konten utama -->
     <main>
         <aside class="sidebar">
             <h2>Filters</h2>
             <form>
                 <label for="price">Price:</label>
-                <input type="range" id="price" name="price" min="0" max="3000">
+                <input type="range" id="price" name="price" min="0" max="135000">
                 <label for="brand">Brand:</label>
                 <select id="brand" name="brand">
                     <option value="Glad2Glow">Glad2Glow</option>
@@ -59,99 +63,96 @@
                 </select>
                 <button type="submit">Apply Filters</button>
             </form>
-            <section id="kategori">
-                <h3>Kategori</h3>
-                <ul>
-                  <li>Moisturizer</li>
-                  <li>Micellar water</li>
-                  <li>Sunscreen</li>
-                </ul>
-            </section>
-          <section id="tentang-kami">
-            <h3>Tentang Kami</h3>
-            <p>
-            Slyn.Xo adalah toko e-commerce yang berfokus pada penyediaan produk perawatan dan kecantikan wajah.
-            Slyn.Xo mempermudah pelanggan untuk membeli produk perawatan dan kecantikan wajah dari mana saja dan kapan saja.
-            </p>
-            </section>
      </aside>
+
+    <!-- untuk menampilkan list produk yang akan dijual-->
         <section id="product-list">
             <h2>Produk Terbaru</h2>
-                    <div class="product-container">
-            <img src="Product 1.jpeg" width="300" height="300" alt="Product 1">
+            <div class="product-container">
+            <img src="Product 1.jpeg" width="354" height="464" alt="Product 1">
             <h3><FONT COLOR="CERISE">‌Wardah Perfect Bright Tone Up Micellar Water</FONT><BR><HR></h3>
             <article class="product-list">
                 <p><h4><FONT COLOR="#777B7E">DESKRIPSI SINGKAT</h4></FONT></p> 
                 Micellar water pencerah wajah dari Wardah, membersihkan makeup & kotoran, menyegarkan, dan membuat kulit tampak 4x lebih cerah seketika.
-           <br><span>Rp 25.800</span>
-           <br> <a href="product1.html"><button>Lihat Detail</button></a>
+           <h4><span>Rp 25.800</span></h4>
+           <h4><a href="product1.html"><button>Lihat Detail</button></a></h4>
             </article>
-        <br>
-            <img src="G2G micellar water pink.jpg" width="300" height="300" alt="product 2">
-        <h3><FONT COLOR="CERISE">Glad2Glow Cherry Blossom Betaine Micellar Water 300ml</FONT><BR><HR></h3>
+
+            <img src="Product 2.jpeg" width="356" height="410" alt="product 2">
+            <h3><FONT COLOR="CERISE">UV Shield Acne Calming Sunscreen Moisturizer SPF35 PA+++</FONT><BR><HR></h3>
             <article class="product-list">
-                <p><FONT COLOR="#777B7E"><h4>DESKRIPSI PRODUK</h4></p></FONT>
-                Micellar water dengan kandungan Cherry Blossom dan Betaine, terasa menyegarkan kulit dan seringan toner. Membersihkan makeup waterproof dan kotoran dengan sekali usapan, lembut di mata, serta memberikan rasa segar dan lembab, tanpa rasa lengket setelah membersihkan wajah. Cocok digunakan untuk semua jenis kulit.
-                <h4><FONT COLOR="#777B7E">BPOM : NA11241200040</h4></FONT>
-               <span>Rp. 47.000</span>
-            <button>Beli Sekarang</button>
+                <p><FONT COLOR="#777B7E"><h4>DESKRIPSI SINGKAT</h4></p></FONT>
+                Sunscreen ringan dengan teknologi Skinboost DNA yang melindungi hingga level DNA dan merawat kulit berjerawat. Mengandung Salicylic Acid, Vitamin B3, dan Panthenol.
+                <h4><span>Rp. 33.000</span></h4>
+           <h4><a href="product2.html"><button>Lihat Detail</button></a></h4>
             </article>
-        <br>
-            <img src="glowies moisturizer.jpg" width="300" height="300" alt="product 3">
+
+            <img src="Product 3.jpeg" width="359" height="374" alt="Product 3">
+            <h3><FONT COLOR="CERISE">‌Wardah Hydrabalm Lip Care Candy Strawberry 4g</FONT><BR><HR></h3>
+            <article class="product-list">
+                <p><h4><FONT COLOR="#777B7E">DESKRIPSI SINGKAT</h4></FONT></p> 
+                 Lip balm dengan aroma buah yang menyegarkan, memberikan kelembapan hingga 12 jam, dilengkapi vitamin E & SPF 15 untuk bibir sehat, lembut, dan terlindungi.
+                <h4><span>Rp 29.000</span></h4>
+           <h4><a href="product3.html"><button>Lihat Detail</button></a></h4>
+            </article>
+        
+            <img src="Product 4.jpeg" width="336" height="454" alt="product 4">
+                <h3><FONT COLOR="CERISE">Glad2Glow Cherry Blossom Betaine Micellar Water 300ml</FONT><BR><HR></h3>
+            <article class="product-list">
+                <p><FONT COLOR="#777B7E"><h4>DESKRIPSI SINGKAT</h4></p></FONT>
+                Micellar water dengan kandungan Cherry Blossom dan Betaine, terasa menyegarkan kulit dan terasa ringan. Dapat membersihkan makeup waterproof dan kotoran dengan sekali usapan, lembut di mata, serta memberikan rasa segar dan lembab, tanpa rasa lengket.
+               <h4><span>Rp. 47.000</span></h4>
+           <h4><a href="product4.html"><button>Lihat Detail</button></a></h4>
+            </article>
+
+            <img src="Product 5.jpeg" width="354" height="464" alt="Product 5">
+            <h3><FONT COLOR="CERISE">‌GLAD2GLOW - G2G 5% Blueberry Moisturizer Cream 5x Ceramide Skin Barrier Repair 25 g</FONT><BR><HR></h3>
+            <article class="product-list">
+                <p><h4><FONT COLOR="#777B7E">DESKRIPSI SINGKAT</h4></FONT></p> 
+               Moisturizer ringan dengan blueberry extract & 5x ceramide untuk menenangkan kulit sensitif, mengurangi kemerahan, serta menjaga kelembapan dan skin barrier.
+                <h4><span>Rp 36.768</span></h4>
+           <h4><a href="product5.html"><button>Lihat Detail</button></a></h4>
+            </article>
+
+               <img src="Product 6.jpeg" width="231" height="457" alt="product 6">
         <h3><FONT COLOR="CERISE">Glowies Beauty Dreamy Moisturizer 80 ml</FONT><BR><HR></h3>
             <article class="product-list">
-                <p><FONT FACE ="BAHNSCHRIFT" COLOR="#777B7E"><h4>DESKRIPSI PRODUK</h4></p></FONT>
-                  <b>Multi-functions Moisturizer</b> diperkaya dengan serum untuk melembabkan sekaligus mencerahkan, memudarkan noda hitam, merawat jerawat dan memperbaiki barrier kulit.
-                <h4><FONT COLOR="#777B7E">BPOM : NA18230109288</h4></FONT></p>
-                       <span>Rp. 139.000</span>
-            <button>Beli Sekarang</button>
-            </article>
-        <br>
-            <img src="wardah suns acne.jpg" width="300" height="300" alt="product 4">
-        <h3><FONT COLOR="CERISE">UV Shield Acne Calming Sunscreen Moisturizer SPF35 PA+++</FONT><BR><HR></h3>
-            <article class="product-list">
-                <p><FONT COLOR="#777B7E"><h4>DESKRIPSI PRODUK</h4></p></FONT>
-                  UV Shield Acne Calming Sunscreen Moisturizer SPF35 PA+++ adalah sunscreen yang diformulasikan dengan riset yang intensif dan teknologi Skinboost DNA yang lindungi kulit hingga level DNA dan bantu merawat kulit berjerawat. Tekstur yang watery, lightweight, dan blendable, cocok untuk kamu yang sering beraktivitas di dalam ruangan. Dilengkapi dengan powerful ingredients untuk merawat kulit berjerawat: Salicylic Acid, Vit. B3 dan Panthenol.               
-            <h4><FONT COLOR="#777B7E">BPOM : NA18241700492</h4></FONT></p>
-                <span>Rp. 33.000</span>
-            <button>Beli Sekarang</button>
+                <p><FONT FACE ="BAHNSCHRIFT" COLOR="#777B7E"><h4>DESKRIPSI SINGKAT</h4></p></FONT>
+                  Multi-functions Moisturizer yang diperkaya dengan serum untuk melembabkan sekaligus mencerahkan, memudarkan noda hitam, merawat jerawat dan memperbaiki barrier kulit.
+                <h4><span>Rp. 139.000</span></h4>
+            <h4><a href="product6.html"><button>Lihat Detail</button></a></h4>
             </article>
          </div>
-            <!-- Product items will be listed here -->
         </section>
 </main>
 
-    <!-- Footer -->
+    <!-- bagian Footer yang berisi informasi penting-->
     <footer>
-        <h3 align="center">
-        <div class="footer-nav">
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-        </h3>
+        <div class="logo">
+            <a href="index.html"><img src="company logo.JPG" alt="Company Logo"></a>
         </div>
+        <section id="kontak">
+        <div class="contact">
+            <h3><FONT COLOR="CERISE">CONTACT :</FONT><BR><HR></h3>
+            <p><FONT COLOR="RED">Email: celinjeslyn@gmail.com</p>
+            <p>Alamat: Jl. Taman Holis Indah No.9, Kota Bandung, Jawa Barat</p></FONT>
+            <p>Phone: 089638973459</p></FONT>
+        </div>
+        
         <div class="newsletter-signup">
-            <p align="right">
             <h3>Subscribe to our newsletter</h3>
             <form>
                 <input type="email" placeholder="Enter your email">
                 <button type="submit">Subscribe</button>
-            </form> </p>
+            </form> 
         </div>
-        <br>
+        
         <div class="social-media">
-            <a href="#https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx"><img src="facebook logo.png" width="50" height="50" alt="Facebook"></a>
-            <a href="#https://vm.tiktok.com/ZSrXuLcAr/"><img src="Tiktok logo.png" width="50" height="50" alt="Tiktok"></a>
-            <a href="#https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx"><img src="logo instagram.jpg" width="50" height="50" alt="Instagram"></a>
+            <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx"><img src="Logo ig.jpeg" width="35" height="35" alt="Facebook"></a>
+            <a href="https://vm.tiktok.com/ZSrXuLcAr/"><img src="Logo TT.jpeg" width="35" height="35" alt="Tiktok"></a>
+            <a href="https://web.facebook.com/celin.jeslyn"><img src="Logo fb.jpeg" width="35" height="35" alt="Instagram"></a>
         </div>
-        <br>
-        <div class="payment-methods">
-            <img src="ovo logo.jpeg" width="48" height="27" alt="OVO">
-            <img src="shopeepay logo.jpeg" width="48" height="27" alt="ShopeePay">
-            <img src="BNI logo.jpeg" width="48" height="27" alt="Transfer BNI">
-        </div>
-        <p>&copy; 2025 Slyn.xo. Semua hak dilindungi.</p>
+        <p>Copyright &copy; 2025 Slyn.Xo. Semua hak dilindungi.</p>
     </footer>
 </body>
 </html>
