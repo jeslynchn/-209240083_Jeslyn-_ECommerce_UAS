@@ -69,6 +69,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  min-height: 520px;
 }
 
 .produk:hover {
@@ -109,6 +110,7 @@ header {
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .produk .btn {
@@ -125,7 +127,7 @@ header {
 }
 
 .produk .btn:hover {
-  background-color: #c82751;
+  background-color: black;
 }
 
 
