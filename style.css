@@ -111,11 +111,7 @@ main {
   gap: 20px;
 }
 
-.sidebar {
-  width: 25%;
-  padding: 20px;
-  background-color: #f1ced3;
-}
+
 
 .product-list {
   margin-top: 0;
@@ -200,12 +196,6 @@ button:hover {
     padding: 10px;
   }
 
-  .sidebar,
-  .product-list {
-    width: 100%;
-    padding: 10px;
-  }
-
   footer {
     flex-direction: column;
   }
@@ -216,8 +206,7 @@ button:hover {
   main {
     flex-direction: row;
   }
-  .sidebar {
-    width: 30%;
+  
   }
   .product-list {
     width: 70%;
@@ -226,9 +215,7 @@ button:hover {
 
 /* Desktop (min-width: 1200px) */
 @media screen and (min-width: 1200px) {
-  .sidebar {
-    width: 25%;
-  }
+ 
   .product-list {
     width: 75%;
   }
