@@ -54,12 +54,22 @@ header {
   display: block;
 }
 
-.main p, main article {
-    text-align: justify;
+.produk-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.sidebar {
+.produk, .detail-produk {
+  border: 1px solid #ddd;
+  padding: 15px;
   text-align: justify;
+}
+
+.produk img, .detail-produk img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 .search-bar {
