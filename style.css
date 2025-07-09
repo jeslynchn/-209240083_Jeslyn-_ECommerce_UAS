@@ -92,9 +92,9 @@ header {
 }
 
 .subjudul {
-  color: #777B7E;
+  color: black;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -112,7 +112,7 @@ header {
 }
 
 .produk .btn {
-  background-color: #f39;
+  background-color: grey;
   color: white;
   padding: 10px 14px;
   text-align: center;
