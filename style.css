@@ -72,6 +72,13 @@ header {
   height: auto;
 }
 
+.btn, button {
+  background-color: #f39;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
 .search-bar {
   display: flex;
   margin-left: 20px;
@@ -85,7 +92,7 @@ header {
 .search-bar button {
   padding: 5px 10px;
   border: none;
-  background-color: white;
+  background-color: grey;
   color: black ;
 }
 
@@ -106,12 +113,8 @@ header {
 }
 
 main {
-  display: flex;
   padding: 20px;
-  gap: 20px;
 }
-
-
 
 .product-list {
   margin-top: 0;
@@ -126,6 +129,12 @@ footer {
   flex-wrap: wrap;
 }
 
+.social-media img{
+width: 10%;
+  max-width: 100px;
+  height: auto;
+}
+  
 button {
     background-color: Grey;
     color: white;
