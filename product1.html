@@ -4,95 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Navigation Example</title>
-    <link rel="stylesheet" href="product1style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Bagian Header untuk menandai judul dan subjudul dan memberikan informasi tentang struktur konten -->
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="company logo.JPG" alt="Company Logo"></a>
-        </div>
-        <nav class="main-navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Moisturizer</a></li>
-                        <li><a href="#">Micellar Water</a></li>
-                        <li><a href="#">Sunscreen</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search products...">
-            <button>🔍Search</button>
-        </div>
-        <div class="user-links">
-            <a href="login.html">Login👤</a>
-            <a href="Keranjang.html">🛒(0)</a></i></FONT>
-        </div>
-    </header>
+  <!-- Logo Toko -->
+  <div class="logo">
+    <a href="index.html"><img src="company logo.JPG" alt="Company Logo"></a>
+  </div>
 
- <!-- Main Content -->
-  <main class="detail-produk">
-    <img src="product1.jpeg"  width="354" height="464" alt="Produk 1">
-    <h2>Wardah Perfect Bright Tone Up Micellar Water</h2>
-    <p><h4><FONT COLOR="#777B7E">DESKRIPSI PRODUCT</h4></FONT></p> 
-        Pembersih wajah tanpa bilas dengan jutaan micelles pencerah yang bersihkan wajah dari make up, kotoran, dan minyak berlebih dengan lembut. Formula Cucumber Extract membuat kulit terasa lebih segar dan menjadikan tampak lebih cerah seketika setelah pemakaian. Dengan teknologi 3 Powerful Actions, membersihkan kotoran dan makeup, bantu cerahkan kulit, dan menjaga skin barrier. Diperkaya dengan Vitamin C dan 4X Bright Berries, bantu menyegarkan, menutrisi, dan menjadikan kulit tampak 4X lebih cerah seketika setelah pemakaian.
-        <br>Ukuran: 100 ml
-        <br>Kelebihan:
-         <br> - Menghapus makeup yang susah hilang sekaligus mengangkat kotoran hingga ke pori-pori dengan lembut
-         <br> - 4x lebih cerah seketika
-         <br> - Menyegarkan kulit wajah setelah pemakaian
-          <br> Jenis Kulit: Semua Jenis Kulit
-          <br>For Dull Skin & Visible Pores.
-          <br>Hypo-allergenic. Non-Comedogenic. Non-Acnegenic.
-          <br>Alcohol-Free.
-          <br>Dermatologically and Ophthalmologically Tested.
-          <br>Cara Pemakaian:
-          <br>Tuangkan produk pada kapas, usapkan pada wajah, mata, & bibir dengan lembut. Tidak perlu dibilas.       
-          <span>Rp 25.800</span>
+  <!-- Navigasi Menu -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Produk</a>
+        <ul class="dropdown">
+          <li><a href="#">Moisturizer</a></li>
+          <li><a href="#">Micellar Water</a></li>
+          <li><a href="#">Sunscreen</a></li>
+          <li><a href="#">Lip Balm</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Login & Keranjang -->
+  <div class="user-links">
+    <a href="login.html">👤 Login</a>
+    <a href="Keranjang.html">🛒 Keranjang (0)</a>
+  </div>
+</header>
+
+
+    <!-- bagian Main Content untuk menandai konten utama -->
+<main class="produk-list">
+  <div class="produk">
+    <img src="Product 1.jpeg" alt="Wardah Perfect Bright">
+
+    <h3 class="judul-produk">Wardah Perfect Bright Tone Up Micellar Water</h3>
+    <hr>
+
+    <h4 class="subjudul">Deskripsi Produk</h4>
+    <p>
+      Pembersih wajah tanpa bilas dengan jutaan micelles pencerah yang membersihkan wajah dari makeup, kotoran, dan minyak berlebih secara lembut. 
+      Diperkaya dengan Cucumber Extract untuk kesegaran instan dan kulit tampak lebih cerah. 
+      Dengan teknologi 3 Powerful Actions: membersihkan, mencerahkan, dan menjaga skin barrier. 
+      Mengandung Vitamin C dan 4X Bright Berries untuk kulit lebih segar dan tampak 4X lebih cerah seketika.
+    </p>
+
+    <h4 class="subjudul">Kelebihan</h4>
+    <ul>
+      <li>Menghapus makeup membandel dan kotoran hingga ke pori-pori</li>
+      <li>4X lebih cerah seketika</li>
+      <li>Menyegarkan kulit wajah setelah pemakaian</li>
+    </ul>
+
+    <h4 class="subjudul">Jenis Kulit</h4>
+    <p>
+      Cocok untuk semua jenis kulit, termasuk kulit kusam & pori-pori tampak besar. <br>
+      Hypo-allergenic, Non-Comedogenic, Non-Acnegenic, Alcohol-Free. <br>
+      Dermatologically and Ophthalmologically Tested.
+    </p>
+      
+    <h4 class="subjudul">Cara Pemakaian</h4>
+    <p>Tuangkan produk pada kapas, lalu usapkan pada wajah, mata, dan bibir dengan lembut. Tidak perlu dibilas.</p>
+      
+    <h4 class="subjudul">Ingredients</h4>
+    <p>Aqua, PEG-6 Caprylic/Capric Glycerides, Hexylene Glycol, Niacinamide, PEG-7 Olive Glycerides, Glycerin, Propanediol, Mannitol, Propylene Glycol, Phenoxyethanol, Panthenol, Xylitol, Allantoin, Cetrimonium Bromide, Cucumis Sativus Fruit Extract, Disodium EDTA, Ethylhexylglycerin, Biosaccharide Gum-2, Butylene Glycol, Fragrance, Actinidia Polygama Fruit Extract.</p>
     
-    <button>Beli</button>
-    <button>🛒+</button>
-  </main>
+    <p><strong>BPOM:</strong> NA18231205786</p>
+    <p><strong>Ukuran:</strong> 100 ml</p>
 
-  <!-- Footer -->
-    <footer>
-        <h3 align="center">
-        <div class="footer-nav">
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-        </h3>
-        </div>
-        <div class="newsletter-signup">
-            <p align="right">
-            <h3>Subscribe to our newsletter</h3>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form> </p>
-        </div>
-        <br>
-        <div class="social-media">
-            <a href="#https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx"><img src="facebook logo.png" width="50" height="50" alt="Facebook"></a>
-            <a href="#https://vm.tiktok.com/ZSrXuLcAr/"><img src="Tiktok logo.png" width="50" height="50" alt="Tiktok"></a>
-            <a href="#https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx"><img src="logo instagram.jpg" width="50" height="50" alt="Instagram"></a>
-        </div>
-        <br>
-        <div class="payment-methods">
-            <img src="ovo logo.jpeg" width="48" height="27" alt="OVO">
-            <img src="shopeepay logo.jpeg" width="48" height="27" alt="ShopeePay">
-            <img src="BNI logo.jpeg" width="48" height="27" alt="Transfer BNI">
-        </div>
-        <p>&copy; 2025 Slyn.xo. Semua hak dilindungi.</p>
-    </footer>
+    <p class="harga">Rp 25.800</p>
+
+  </div>
+</main>
+
+
+    <!-- bagian Footer yang berisi informasi penting-->
+  <footer>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="company logo.JPG" alt="Company Logo">
+      </a>
+    </div>
+      
+  <div class="footer-container">
+      
+    <div class="contact">
+      <h3>Contact</h3>
+      <hr>
+      <p><strong>✉️Email:</strong> celinjeslyn@gmail.com</p>
+      <p><strong>📍Alamat:</strong> Jl. Taman Holis Indah No.9, Kota Bandung, Jawa Barat</p>
+      <p><strong>📞Phone:</strong> 0896-3897-3459</p>
+    </div>
+
+    <div class="newsletter-signup">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form> 
+    </div>
+
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx">
+        <img src="Logo ig.jpeg" alt="Instagram">
+      </a>
+      <a href="https://vm.tiktok.com/ZSrXuLcAr/">
+        <img src="Logo TT.jpeg" alt="TikTok">
+      </a>
+      <a href="https://web.facebook.com/celin.jeslyn">
+        <img src="Logo Fb.jpeg" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
 
