@@ -342,7 +342,7 @@ p.copyright {
   }
 }
 
-/* Tablets */
+/* Tablets  */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   main {
     flex-direction: row;
@@ -354,7 +354,14 @@ p.copyright {
   }
 }
 
-/* Desktop */
+/* Desktop  */
+@media screen and (min-width: 1200px) {
+ 
+  .product-list {
+    width: 75%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
  
   .product-list {
