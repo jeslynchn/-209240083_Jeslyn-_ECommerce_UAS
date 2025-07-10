@@ -265,6 +265,78 @@ header {
   100% { opacity: 0; transform: translateY(20px); }
 }
 
+/*== style CSS untuk halaman contact ==*/
+.kontak-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fffafc;
+}
+
+.kontak-container {
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.kontak-container p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-kontak label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+}
+
+.form-kontak textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-kirim {
+  background-color: #d94553;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-kirim:hover {
+  background-color: #b93645;
+}
+
+.kontak-info {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 /* === style CSS untuk footer === */
 footer {
