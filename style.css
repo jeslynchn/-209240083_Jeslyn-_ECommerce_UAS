@@ -1,6 +1,6 @@
 /* ========== BASE STYLES ========== */
 body {
-  font-family: Montserrat;
+  font-family: verdana;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +18,7 @@ header {
 
 /* Logo */
 .logo img {
-  width: 200px;
+  width: 170px;
   height: auto;
   border-radius: 10px;
 }
@@ -46,7 +46,7 @@ header {
 }
 
 .main-navigation ul li a:hover {
-  background-color: #b85c66;
+  background-color: #fac3c9;
 }
 
 .main-navigation ul li ul.dropdown {
