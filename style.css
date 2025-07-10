@@ -132,11 +132,23 @@ header {
 
 /* === style CSS untuk produk === */
 .judul-section {
-  text-align: left;
+  text-align: center;
   font-size: 28px;
   font-weight: bold;
   color: #ff3b4c;
   margin: 40px 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: geser 10s linear infinite;
+}
+
+@keyframes geser {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .produk-list {
