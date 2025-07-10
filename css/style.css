@@ -1,10 +1,4 @@
 /* ========== BASE STYLES ========== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: verdana;
   margin: 0;
@@ -129,7 +123,7 @@ header {
 
 .user-links a:hover {
   background-color: grey;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease
 }
 
 /* Breadcrumbs */
@@ -312,6 +306,7 @@ footer {
   background-color: #f9a1a9;
   color: #362312;
   padding: 30px 20px 10px;
+  text-align: center;
 }
 
 .footer-container {
@@ -319,16 +314,22 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .contact, .newsletter-signup, .social-media {
-  flex: 1 1 250px;
-  min-width: 250px;
-  text-align: left;
+  flex: 1 1 300px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact h3,
@@ -341,7 +342,6 @@ footer {
 .newsletter-signup form {
   display: flex;
   flex-wrap: nowrap;
-  max-width: 100%;
 }
 
 .newsletter-signup input {
@@ -371,10 +371,6 @@ footer {
   transform: scale(1.1);
 }
 
-footer p {
-  text-align: center;
-}
-
 p.copyright {
   font-size: 0.9rem;
   color: #444;
@@ -383,7 +379,7 @@ p.copyright {
 
 /* ==== RESPONSIVE STYLES ==== */
 
-/* Smartphones */
+/* Smartphones (max-width: 767px) */
 @media screen and (max-width: 767px) {
   header {
     flex-direction: column;
@@ -409,25 +405,26 @@ p.copyright {
     padding: 10px;
   }
 
-  .footer-container {
+  footer {
     flex-direction: column;
-    align-items: stretch;
   }
 }
 
-/* Tablets */
+/* Tablets (min-width: 768px) and up */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   main {
     flex-direction: row;
   }
-
+  
+  }
   .product-list {
     width: 70%;
   }
 }
 
-/* Desktop */
+/* Desktop (min-width: 1200px) */
 @media screen and (min-width: 1200px) {
+ 
   .product-list {
     width: 75%;
   }
