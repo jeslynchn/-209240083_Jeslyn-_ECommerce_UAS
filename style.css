@@ -57,7 +57,7 @@ header {
   left: 0;
   min-width: 160px;
   padding: 10px 0;
-  background-color: #f7c1c7;
+  background-color: #e299a1;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -76,7 +76,7 @@ header {
 }
 
 .main-navigation ul li ul.dropdown li a:hover {
-  background-color: #e299a1;
+  background-color: #ffd6db;
 }
 
 /* Search */
