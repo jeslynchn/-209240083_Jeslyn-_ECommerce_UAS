@@ -139,7 +139,7 @@ header {
   font-weight: 500;
 }
 
-/* === style CSS untuk produk === */
+/* === Judul yang bisa Berjalan === */
 .judul-section {
   text-align: center;
   font-size: 28px;
@@ -152,14 +152,11 @@ header {
 }
 
 @keyframes geser {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
+/* === Daftar Produk === */
 .produk-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -168,6 +165,7 @@ header {
   padding: 0 15px;
 }
 
+/* === Kartu Produk === */
 .produk {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -178,7 +176,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   transition: transform 0.2s ease;
-  min-height: 520px;
+  min-height: 560px;
 }
 
 .produk:hover {
@@ -193,6 +191,7 @@ header {
   margin-bottom: 10px;
 }
 
+/* === Teks Produk === */
 .judul-produk {
   color: #d94553;
   font-size: 1rem;
@@ -205,14 +204,7 @@ header {
   color: black;
   font-size: 0.85rem;
   font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.harga {
-  font-weight: bold;
-  color: red;
-  margin: 10px 0;
+  margin: 10px 0 5px;
 }
 
 .produk p {
@@ -222,6 +214,13 @@ header {
   text-align: justify;
 }
 
+.harga {
+  font-weight: bold;
+  color: red;
+  margin: 10px 0;
+}
+
+/* === Tombol Detail Produk === */
 .produk .btn {
   background-color: grey;
   color: white;
@@ -229,7 +228,7 @@ header {
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   margin-top: auto;
   transition: background-color 0.3s ease;
@@ -239,13 +238,13 @@ header {
   background-color: black;
 }
 
-/* style css untuk tombol keranjang */
+/* === Form Keranjang === */
 .form-keranjang {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .form-keranjang label {
@@ -258,8 +257,10 @@ header {
   border: 1px solid #ccc;
   border-radius: 6px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
+/* === Tombol Keranjang === */
 .btn-keranjang {
   background-color: #d94553;
   color: white;
@@ -268,13 +269,15 @@ header {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-keranjang:hover {
   background-color: #b93645;
+  transform: scale(1.05);
 }
 
+/* === Notifikasi Keranjang === */
 #notif {
   position: fixed;
   bottom: 20px;
@@ -283,14 +286,14 @@ header {
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 1000;
   font-weight: bold;
   animation: fadeInOut 2s ease-in-out;
 }
 
-/* efek notifikasi keranjang animasi masuk-keluar */
+/* === Animasi Notifikasi keranjang === */
 @keyframes fadeInOut {
   0% { opacity: 0; transform: translateY(20px); }
   10% { opacity: 1; transform: translateY(0); }
