@@ -116,21 +116,6 @@
   </div>
 </main>
 
-<!-- JavaScript untuk keranjang-->
-<script>
-  let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
-  document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
-
-  function tambahKeKeranjang(inputId) {
-    const jumlah = parseInt(document.getElementById(inputId).value) || 1;
-    totalKeranjang += jumlah;
-    document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
-    localStorage.setItem("keranjangJumlah", totalKeranjang);
-
-  }
-</script>
-
-
     <!-- bagian Footer yang berisi informasi penting-->
   <footer>
     <div class="footer-logo">
