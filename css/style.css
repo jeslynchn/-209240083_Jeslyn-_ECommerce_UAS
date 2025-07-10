@@ -305,31 +305,36 @@ header {
 footer {
   background-color: #f9a1a9;
   color: #362312;
-  padding: 30px 20px 10px;
+  padding: 30px 0 10px;
   text-align: center;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
   box-sizing: border-box;
+  text-align: left;
+}
+
+.footer-logo,
+.contact,
+.newsletter-signup,
+.social-media {
+  flex: 1 1 250px;
+  min-width: 220px;
 }
 
 .footer-logo img {
   width: 100px;
   height: auto;
   border-radius: 10px;
-}
-
-.contact, .newsletter-signup, .social-media {
-  flex: 1 1 300px;
-  max-width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .contact h3,
@@ -342,6 +347,7 @@ footer {
 .newsletter-signup form {
   display: flex;
   flex-wrap: nowrap;
+  max-width: 100%;
 }
 
 .newsletter-signup input {
@@ -374,16 +380,41 @@ footer {
 p.copyright {
   font-size: 0.9rem;
   color: #444;
-  margin-top: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+  .footer-logo,
+  .contact,
+  .newsletter-signup,
+  .social-media {
+    width: 100%;
+  }
+
+  .newsletter-signup form {
+    flex-direction: column;
+  }
+
+  .newsletter-signup input,
+  .newsletter-signup button {
+    width: 100%;
+    border-radius: 4px;
+    margin: 5px 0;
+  }
+
+  .social-media img {
+    margin: 5px;
+  }
 }
 
 /* ==== RESPONSIVE STYLES ==== */
 
-/* Smartphones (max-width: 767px) */
-@media screen and (max-width: 767px) {
-  header {
+/* Smartphones */
+@media screen and (max-width: 768px) {
+  .footer-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .main-navigation ul {
@@ -410,7 +441,7 @@ p.copyright {
   }
 }
 
-/* Tablets (min-width: 768px) and up */
+/* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   main {
     flex-direction: row;
@@ -422,7 +453,7 @@ p.copyright {
   }
 }
 
-/* Desktop (min-width: 1200px) */
+/* Desktop */
 @media screen and (min-width: 1200px) {
  
   .product-list {
