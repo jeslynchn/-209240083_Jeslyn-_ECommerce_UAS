@@ -58,6 +58,13 @@
     <a href="product1.html" class="btn">Lihat Detail</a>
   </div>
 
+    <!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
+
     <div class="produk">
     <img src="images/Product 2.jpeg" alt="Dreamy Moisturizer">
     <h3 class="judul-produk">Glowies Beauty Dreamy Moisturizer 80ml</h3>
@@ -67,6 +74,13 @@
     <p class="harga">Rp 139.000</p>
     <a href="product2.html" class="btn">Lihat Detail</a>
   </div>
+
+    <!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
     
   <div class="produk">
     <img src="images/Product 3.jpeg" alt="wardah Hydrabalm Lip Care">
@@ -78,6 +92,13 @@
     <a href="product3.html" class="btn">Lihat Detail</a>
   </div>
 
+    <!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
+
   <div class="produk">
     <img src="images/Product 4.jpeg" alt="G2G Micellar Cherry Blossom">
     <h3 class="judul-produk">Glad2Glow Cherry Blossom Betaine Micellar Water 300ml</h3>
@@ -87,6 +108,13 @@
     <p class="harga">Rp 47.000</p>
     <a href="product4.html" class="btn">Lihat Detail</a>
   </div>
+
+    <!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
 
   <div class="produk">
     <img src="images/Product 5.jpeg" alt="Blueberry Moisturizer">
@@ -98,6 +126,13 @@
     <a href="product5.html" class="btn">Lihat Detail</a>
   </div>
 
+<!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
+    
     <div class="produk">
     <img src="images/Product 6.jpeg" alt="Wardah UV Shield Sunscreen">
     <h3 class="judul-produk"> Wardah UV Shield Acne Calming Sunscreen Moisturizer SPF35 PA+++</h3>
@@ -108,7 +143,39 @@
     <a href="product6.html" class="btn">Lihat Detail</a>
   </div>
     
+    <!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
+    
 </main>
+ 
+   <div id="notif">Produk berhasil ditambahkan ke keranjang!</div>
+
+<!-- JavaScript untuk keranjang belanja -->
+<script>
+  
+  let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
+  document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
+
+ function tambahKeKeranjang() {
+  const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+  totalKeranjang += jumlah;
+  document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
+  localStorage.setItem("keranjangJumlah", totalKeranjang);
+
+  // ubtuk menampilan notifikasi
+  const notif = document.getElementById("notif");
+  notif.style.display = "block";
+
+  setTimeout(() => {
+    notif.style.display = "none";
+  }, 2000); 
+}
+
+</script>
 
     <!-- bagian Footer yang berisi informasi penting-->
   <footer>
