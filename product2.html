@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Navigation Example</title>
+    <link rel="stylesheet" href="../css/product1.css">
+</head>
+<body>
+    <!-- Bagian Header untuk menandai judul dan subjudul dan memberikan informasi tentang struktur konten -->
+    <header>
+  <!-- Logo Toko -->
+  <div class="logo">
+    <a href="index.html"><img src="images/company logo.JPG" alt="Company Logo"></a>
+  </div>
+
+  <!-- Navigasi Menu -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Produk</a>
+        <ul class="dropdown">
+          <li><a href="#">Moisturizer</a></li>
+          <li><a href="#">Micellar Water</a></li>
+          <li><a href="#">Sunscreen</a></li>
+          <li><a href="#">Lip Balm</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Login & Keranjang -->
+  <div class="user-links">
+    <a href="login.html">👤 Login</a>
+    <a href="Keranjang.html">🛒 Keranjang (<span id="cart-count">0</span>)</a>
+  </div>
+</header>
+
+
+    <!-- bagian Main Content untuk menandai konten utama -->
+<main class="produk-list">
+  <div class="produk">
+    <img src="images/Product 1.jpeg" alt="Wardah Perfect Bright">
+
+    <h3 class="judul-produk">Wardah Perfect Bright Tone Up Micellar Water</h3>
+    <hr>
+
+    <h4 class="subjudul">Deskripsi Produk</h4>
+    <p>
+      Multi-functions Moisturizer yang diperkaya dengan serum untuk melembabkan sekaligus mencerahkan, memudarkan noda hitam, merawat jerawat, dan memperbaiki skin barrier.
+    </p>
+
+    <h4 class="subjudul">Kandungan Utama</h4>
+    <ul>
+      <li><strong>Azeclair 7%</strong> – Merawat jerawat dan mencerahkan kulit</li>
+      <li><strong>Alpha Arbutin</strong> – Mencerahkan kulit dan menghilangkan noda hitam</li>
+      <li><strong>Niacinamide</strong> – Mencerahkan kulit dan membantu pemulihan jerawat</li>
+      <li><strong>Tranexamic Acid</strong> – Menghilangkan noda hitam dan bekas jerawat</li>
+      <li><strong>Hyaluronic Acid</strong> – Mengembalikan dan mengunci kelembapan kulit</li>
+      <li><strong>Centella Asiatica</strong> – Menenangkan kulit</li>
+      <li><strong>5x Ceramide</strong> – Memperbaiki skin barrier</li>
+      <li><strong>Lactobacillus Filtrate</strong> – Memperkuat lapisan mikroba kulit</li>
+    </ul>
+
+    <h4 class="subjudul">Ingredients</h4>
+    <p>
+      Aqua, Potassium Azeloyl Diglycinate, Niacinamide, 1,2-Pentanediol, Sodium Hyaluronate, Potassium Hyaluronate, Sodium Hyaluronate Crosspolymer, Sodium Acetylated Hyaluronate, Hydroxypropyltrimonium Hyaluronate, Hydrolyzed Hyaluronic Acid, Hyaluronic Acid, Hydrolyzed Sodium Hyaluronate, Ethylhexylglycerin, Ceramide EOP, Ceramide NS, Ceramide NP, Ceramide AS, Ceramide AP, Cholestrol, Glycerin, Triethanolamine, Tranexamic Acid, Aloe Barbadensis Leaf Extract, 1,3-Butanediol, 2-Phenoxyethanol, Allantoin, Trehalose, Carbomer, DMDM Hydantoin, Titanium Dioxide, Punica Granatum Fruit Extract, Centella Asiatica Extract, Disodium EDTA, CI 16255, Alpha-Arbutin, Fragrance, Lactobacillus Ferment Filtrate, 1,2-Hexanediol
+    </p>
+
+    <p><strong>BPOM:</strong> NA18230109288</p>
+    <p class="harga">Rp 139.000</p>
+
+    <div class="form-keranjang">
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" value="1" min="1">
+      <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+    </div>
+  </div>
+</main>
+
+
+    <!-- bagian Footer yang berisi informasi penting-->
+  <footer>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="images/company logo.JPG" alt="Company Logo">
+      </a>
+    </div>
+      
+  <div class="footer-container">
+      
+    <div class="contact">
+      <h3>Contact</h3>
+      <hr>
+      <p><strong>✉️Email:</strong> celinjeslyn@gmail.com</p>
+      <p><strong>📍Alamat:</strong> Jl. Taman Holis Indah No.9, Kota Bandung, Jawa Barat</p>
+      <p><strong>📞Phone:</strong> 0896-3897-3459</p>
+    </div>
+
+    <div class="newsletter-signup">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form> 
+    </div>
+
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx">
+        <img src="images/Logo ig.jpeg" alt="Instagram">
+      </a>
+      <a href="https://vm.tiktok.com/ZSrXuLcAr/">
+        <img src="images/Logo TT.jpeg" alt="TikTok">
+      </a>
+      <a href="https://web.facebook.com/celin.jeslyn">
+        <img src="images/Logo Fb.jpeg" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
+</footer>
+
+    <script src="js/keranjang.js"></script>
+</body>
+</html>
