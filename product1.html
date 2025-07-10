@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Navigation Example</title>
+    <title>Jeslyn 209240083 abi3 - ECommerce sederhana</title>
     <link rel="stylesheet" href="css/product1.css">
 </head>
 <body>
@@ -87,30 +87,38 @@
     <p><strong>Ukuran:</strong> 100 ml</p>
 
     <p class="harga">Rp 25.800</p>
-      
+
+<!-- untuk tombol keranjang belanja -->
    <div class="form-keranjang">
   <label for="jumlah">Jumlah:</label>
   <input type="number" id="jumlah" value="1" min="1">
-  <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
    </div>
   </div>
 </main>
+   <div id="notif">Produk berhasil ditambahkan ke keranjang!</div>
 
+<!-- JavaScript untuk keranjang belanja -->
 <script>
-  // Saat halaman dimuat, ambil data dari localStorage
+  
   let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
   document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
 
-  function tambahKeKeranjang() {
-    const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
-    totalKeranjang += jumlah;
+ function tambahKeKeranjang() {
+  const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+  totalKeranjang += jumlah;
+  document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
+  localStorage.setItem("keranjangJumlah", totalKeranjang);
 
-    // Tampilkan jumlah ke halaman
-    document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
+  // ubtuk menampilan notifikasi
+  const notif = document.getElementById("notif");
+  notif.style.display = "block";
 
-    // Simpan ke localStorage
-    localStorage.setItem("keranjangJumlah", totalKeranjang);
-  }
+  setTimeout(() => {
+    notif.style.display = "none";
+  }, 2000); 
+}
+
 </script>
 
 
