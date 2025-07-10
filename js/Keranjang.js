@@ -15,3 +15,13 @@ function tambahKeKeranjang() {
 
   localStorage.setItem('jumlahKeranjang', jumlahKeranjang);
 }
+
+// Saat halaman dimuat, cek localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const simpan = localStorage.getItem('jumlahKeranjang');
+  if (simpan) {
+    jumlahKeranjang = parseInt(simpan);
+    const keranjangTeks = document.querySelector('.user-links a[href="Keranjang.html"]');
+    keranjangTeks.innerHTML = `🛒 Keranjang (${jumlahKeranjang})`;
+  }
+});
