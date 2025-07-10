@@ -1,6 +1,6 @@
 /* ========== BASE STYLES ========== */
 body {
-  font-family: BAHNSCHRIFT;
+  font-family: Quicksand;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +18,9 @@ header {
 
 /* Logo */
 .logo img {
-  height: 50px;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Navigation Menu */
@@ -44,13 +46,13 @@ header {
 }
 
 .main-navigation ul li a:hover {
-  background-color: #f3b0b8;
+  background-color: #b85c66;
 }
 
 .main-navigation ul li ul.dropdown {
   display: none;
   position: absolute;
-  background-color: #ffe6ea;
+  background-color: #ffeff2;
   border-radius: 8px;
   top: 110%;
   left: 0;
@@ -111,7 +113,7 @@ header {
 }
 
 .user-links a:hover {
-  background-color: #fcd5ce;
+  background-color: grey;
 }
 
 /* Breadcrumbs */
@@ -129,8 +131,9 @@ header {
 
 /* === style CSS untuk produk === */
 .judul-section {
-  text-align: center;
+  text-align: left;
   font-size: 28px;
+  font-weight: bold;
   margin: 40px 0 10px;
 }
 
@@ -168,7 +171,7 @@ header {
 }
 
 .judul-produk {
-  color: #362312;
+  color: #e09098;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 5px;
