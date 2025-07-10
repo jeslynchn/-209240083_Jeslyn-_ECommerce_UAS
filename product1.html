@@ -96,6 +96,22 @@
   </div>
 </main>
 
+<script>
+  // Saat halaman dimuat, ambil data dari localStorage
+  let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
+  document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
+
+  function tambahKeKeranjang() {
+    const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+    totalKeranjang += jumlah;
+
+    // Tampilkan jumlah ke halaman
+    document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
+
+    // Simpan ke localStorage
+    localStorage.setItem("keranjangJumlah", totalKeranjang);
+  }
+</script>
 
 
     <!-- bagian Footer yang berisi informasi penting-->
@@ -141,7 +157,6 @@
   <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
 </footer>
 
-    <script src="js/keranjang.js"></script>
 </body>
 </html>
 
