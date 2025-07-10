@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeslyn 209240083 abi3 - ECommerce sederhana</title>
+    <link rel="stylesheet" href="css/product1.css">
+</head>
+<body>
+    <!-- Bagian Header untuk menandai judul dan subjudul dan memberikan informasi tentang struktur konten -->
+    <header>
+  <!-- Logo Toko -->
+  <div class="logo">
+    <a href="index.html"><img src="images/company logo.JPG" alt="Company Logo"></a>
+  </div>
+
+  <!-- Navigasi Menu -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Produk</a>
+        <ul class="dropdown">
+          <li><a href="moisturizer.html">Moisturizer</a></li>
+          <li><a href="micellarWater.html">Micellar Water</a></li>
+          <li><a href="sunscreen.html">Sunscreen</a></li>
+          <li><a href="lipbalm.html">Lip Balm</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+    </ul>
+  </nav>
+        
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Login & Keranjang -->
+  <div class="user-links">
+    <a href="login.html">👤 Login</a>
+    <a href="Keranjang.html">🛒 Keranjang <span id="jumlah-keranjang">0</span></a>
+  </div>
+</header>
+
+
+    <!-- bagian Main Content untuk menandai konten utama -->
+<main class="produk-list">
+  <div class="produk">
+   <img src="images/Product 6.jpeg" alt="Wardah UV Shield Sunscreen">
+
+    <h3 class="judul-produk">Wardah UV Shield Acne Calming Sunscreen Moisturizer SPF35 PA+++</h3>
+    <hr>
+
+   <h4 class="subjudul">Deskripsi Produk</h4>
+    <p>
+      Sunscreen Moisturizer SPF 35 PA+++ yang nyaman dan ringan digunakan setiap hari. 
+      Diformulasikan khusus untuk kulit wajah berminyak dan rentan berjerawat. 
+      Mengandung Salicylic Acid, Panthenol, dan Vitamin B3 yang dapat membantu melawan bakteri penyebab jerawat.
+    </p>
+
+    <h4 class="subjudul">Keunggulan</h4>
+    <ul>
+      <li>Ringan</li>
+      <li>Teruji Secara Dermatologis</li>
+      <li>Fresh & Watery Texture</li>
+      <li>Non-Comedogenic</li>
+      <li>Non-Acnegenic</li>
+      <li>No Alcohol</li>
+      <li>No Fragrance</li>
+      <li>No White Cast</li>
+      <li>Invisible Finish</li>
+    </ul>
+
+    <h4 class="subjudul">Ingredients</h4>
+    <p>
+      Aqua, Ethylhexyl Methoxycinnamate, Niacinamide, Butyl Methoxydibenzoylmethane, Aluminium Starch Octenyl Succinate, 
+      Phenoxyethanol, Cetearyl Olivate, Propanediol, Butylene Glycol, Octocrylene, Acrylates C10-30 Alkyl Acrylate Crosspolymer, 
+      Sorbitan Olivate, Polymethyl Methacrylate, Aminomethyl Propanol, Allantoin, Salicylic Acid, Xanthan Gum, Triethylene Glycol, 
+      Ethylhexyl Triazone, Tetrasodium EDTA, Lecithin, BHT.
+    </p>
+
+    <h4 class="subjudul">Cara Pakai</h4>
+    <ol>
+      <li>Aplikasikan sunscreen sebanyak 2 ruas jari secara merata ke seluruh wajah yang telah dibersihkan.</li>
+      <li>Tunggu 15 menit sebelum beraktivitas di luar ruangan.</li>
+      <li>Reapply setiap 2 jam atau jika diperlukan.</li>
+      <li>Simpan di tempat sejuk dan terhindar dari cahaya serta panas berlebih.</li>
+    </ol>
+
+    <p><strong>BPOM:</strong> NA18241700492</p>
+    <p class="harga">Rp 33.000</p>
+
+<!-- untuk tombol keranjang belanja -->
+   <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+    <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+   </div>
+  </div>
+</main>
+   <div id="notif">Produk berhasil ditambahkan ke keranjang!</div>
+
+<!-- JavaScript untuk keranjang belanja -->
+<script>
+  
+  let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
+  document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
+
+ function tambahKeKeranjang() {
+  const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+  totalKeranjang += jumlah;
+  document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
+  localStorage.setItem("keranjangJumlah", totalKeranjang);
+
+  // ubtuk menampilan notifikasi
+  const notif = document.getElementById("notif");
+  notif.style.display = "block";
+
+  setTimeout(() => {
+    notif.style.display = "none";
+  }, 2000); 
+}
+
+</script>
+
+
+    <!-- bagian Footer yang berisi informasi penting-->
+  <footer>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="images/company logo.JPG" alt="Company Logo">
+      </a>
+    </div>
+      
+  <div class="footer-container">
+      
+    <div class="contact">
+      <h3>Contact</h3>
+      <hr>
+      <p><strong>✉️Email:</strong> celinjeslyn@gmail.com</p>
+      <p><strong>📍Alamat:</strong> Jl. Taman Holis Indah No.9, Kota Bandung, Jawa Barat</p>
+      <p><strong>📞Phone:</strong> 0896-3897-3459</p>
+    </div>
+
+    <div class="newsletter-signup">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form> 
+    </div>
+
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx">
+        <img src="images/Logo ig.jpeg" alt="Instagram">
+      </a>
+      <a href="https://vm.tiktok.com/ZSrXuLcAr/">
+        <img src="images/Logo TT.jpeg" alt="TikTok">
+      </a>
+      <a href="https://web.facebook.com/celin.jeslyn">
+        <img src="images/Logo Fb.jpeg" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
