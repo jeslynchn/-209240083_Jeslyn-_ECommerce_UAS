@@ -355,16 +355,10 @@ p.copyright {
 }
 
 /* Desktop  */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
  
   .product-list {
     width: 75%;
   }
 }
 
-@media screen and (min-width: 1200px) {
- 
-  .product-list {
-    width: 75%;
-  }
-}
