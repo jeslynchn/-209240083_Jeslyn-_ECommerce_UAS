@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Navigation Example</title>
-    <link rel="stylesheet" href="product1.css">
+    <link rel="stylesheet" href="css/product1.css">
 </head>
 <body>
     <!-- Bagian Header untuk menandai judul dan subjudul dan memberikan informasi tentang struktur konten -->
     <header>
   <!-- Logo Toko -->
   <div class="logo">
-    <a href="index.html"><img src="company logo.JPG" alt="Company Logo"></a>
+    <a href="index.html"><img src="images/company logo.JPG" alt="Company Logo"></a>
   </div>
 
   <!-- Navigasi Menu -->
@@ -48,7 +48,7 @@
     <!-- bagian Main Content untuk menandai konten utama -->
 <main class="produk-list">
   <div class="produk">
-    <img src="Product 1.jpeg" alt="Wardah Perfect Bright">
+    <img src="images/Product 1.jpeg" alt="Wardah Perfect Bright">
 
     <h3 class="judul-produk">Wardah Perfect Bright Tone Up Micellar Water</h3>
     <hr>
@@ -88,6 +88,11 @@
 
     <p class="harga">Rp 25.800</p>
   </div>
+    <div class="form-keranjang">
+  <label for="jumlah">Jumlah:</label>
+  <input type="number" id="jumlah" value="1" min="1">
+  <button class="btn-keranjang" onclick="tambahKeKeranjang()">🛒 Tambah ke Keranjang</button>
+</div>
 </main>
 
 
@@ -96,7 +101,7 @@
   <footer>
     <div class="footer-logo">
       <a href="index.html">
-        <img src="company logo.JPG" alt="Company Logo">
+        <img src="images/company logo.JPG" alt="Company Logo">
       </a>
     </div>
       
@@ -121,13 +126,13 @@
     <div class="social-media">
       <h3>Follow Us</h3>
       <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx">
-        <img src="Logo ig.jpeg" alt="Instagram">
+        <img src="images/Logo ig.jpeg" alt="Instagram">
       </a>
       <a href="https://vm.tiktok.com/ZSrXuLcAr/">
-        <img src="Logo TT.jpeg" alt="TikTok">
+        <img src="images/Logo TT.jpeg" alt="TikTok">
       </a>
       <a href="https://web.facebook.com/celin.jeslyn">
-        <img src="Logo Fb.jpeg" alt="Facebook">
+        <img src="images/Logo Fb.jpeg" alt="Facebook">
       </a>
     </div>
   </div>
@@ -135,6 +140,7 @@
   <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
 </footer>
 
+    <script src="js/keranjang.js"></script>
 </body>
 </html>
 
