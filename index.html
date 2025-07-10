@@ -58,11 +58,6 @@
     <p>Micellar water yang dapat mengangkat kotoran, minyak, dan makeup dengan lembut. Mengandung Vitamin C dan 4X Bright Berries untuk kulit segar dan cerah seketika.</p>
     <p class="harga">Rp 25.800</p>
     <a href="product1.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah1">Jumlah:</label>
-      <input type="number" id="jumlah1" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah1')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 
   <!-- Produk 2 -->
@@ -74,11 +69,6 @@
     <p>Multi-functions Moisturizer yang diperkaya dengan serum untuk melembabkan sekaligus mencerahkan, memudarkan noda hitam, merawat jerawat dan memperbaiki barrier kulit.</p>
     <p class="harga">Rp 139.000</p>
     <a href="product2.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah2">Jumlah:</label>
-      <input type="number" id="jumlah2" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah2')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 
   <!-- Produk 3 -->
@@ -90,11 +80,6 @@
     <p>Lip balm dengan aroma buah yang menyegarkan, memberikan kelembapan hingga 12 jam, dilengkapi vitamin E & SPF 15 untuk bibir sehat, lembut, dan terlindungi.</p>
     <p class="harga">Rp 29.000</p>
     <a href="product3.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah3">Jumlah:</label>
-      <input type="number" id="jumlah3" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah3')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 
   <!-- Produk 4 -->
@@ -106,11 +91,6 @@
     <p>Micellar water yang dapat membersihkan makeup waterproof dan kotoran dengan sekali usapan. Terasa ringan dan juga menyegarkan kulit wajah.</p>
     <p class="harga">Rp 47.000</p>
     <a href="product4.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah4">Jumlah:</label>
-      <input type="number" id="jumlah4" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah4')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 
   <!-- Produk 5 -->
@@ -122,11 +102,6 @@
     <p>Moisturizer ringan dengan blueberry extract & 5x ceramide untuk menenangkan kulit sensitif, mengurangi kemerahan, serta menjaga kelembapan dan skin barrier.</p>
     <p class="harga">Rp 36.768</p>
     <a href="product5.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah5">Jumlah:</label>
-      <input type="number" id="jumlah5" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah5')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 
   <!-- Produk 6 -->
@@ -138,15 +113,8 @@
     <p>Sunscreen ringan dengan teknologi Skinboost DNA yang melindungi hingga level DNA dan merawat kulit berjerawat. Mengandung Salicylic Acid, Vitamin B3, dan Panthenol.</p>
     <p class="harga">Rp 33.000</p>
     <a href="product6.html" class="btn">Lihat Detail</a>
-    <div class="form-keranjang">
-      <label for="jumlah6">Jumlah:</label>
-      <input type="number" id="jumlah6" value="1" min="1">
-      <button class="btn-keranjang" onclick="tambahKeKeranjang('jumlah6')">🛒 Tambah ke Keranjang</button>
-    </div>
   </div>
 </main>
-
-<div id="notif" style="display: none;">Produk berhasil ditambahkan ke keranjang!</div>
 
 <!-- JavaScript untuk keranjang-->
 <script>
@@ -159,11 +127,6 @@
     document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
     localStorage.setItem("keranjangJumlah", totalKeranjang);
 
-    const notif = document.getElementById("notif");
-    notif.style.display = "block";
-    setTimeout(() => {
-      notif.style.display = "none";
-    }, 2000);
   }
 </script>
 
