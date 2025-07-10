@@ -8,23 +8,26 @@ body {
 header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f9a1a9;
-  color: #FADADD;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #f9a1a9, #fcd5ce);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  gap: 15px;
 }
 
+/* Logo */
 .logo img {
   height: 50px;
 }
 
+/* Navigation Menu */
 .main-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .main-navigation ul li {
@@ -32,22 +35,96 @@ header {
 }
 
 .main-navigation ul li a {
-  color: #362312;
-  padding: 10px 20px;
+  color: #5a2a27;
+  padding: 8px 14px;
   text-decoration: none;
-  display: block;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  border-radius: 6px;
+}
+
+.main-navigation ul li a:hover {
+  background-color: #f3b0b8;
 }
 
 .main-navigation ul li ul.dropdown {
   display: none;
   position: absolute;
-  background-color: #f1ced3;
-  top: 100%;
+  background-color: #ffe6ea;
+  border-radius: 8px;
+  top: 110%;
   left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 999;
+  padding: 10px 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.main-navigation ul li:hover ul.dropdown {
+  display: block;
+}
+
+.main-navigation ul li ul.dropdown li a {
+  padding: 10px 16px;
+  color: #333;
+}
+
+/* Search */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+}
+
+.search-bar input {
+  border: none;
+  padding: 6px 12px;
+  outline: none;
+}
+
+.search-bar button {
+  border: none;
+  background: #f9a1a9;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* Login dan Keranjang */
+.user-links {
+  display: flex;
+  gap: 15px;
+}
+
+.user-links a {
+  color: #5a2a27;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #f3b0b8;
+  transition: background 0.3s;
+}
+
+.user-links a:hover {
+  background-color: #fcd5ce;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  padding: 10px 30px;
+  background-color: #ffe6ea;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #b76e79;
+  font-weight: 500;
 }
 
 /* === style CSS untuk produk === */
@@ -73,7 +150,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   transition: transform 0.2s ease;
   min-height: 520px;
 }
@@ -91,7 +168,7 @@ header {
 }
 
 .judul-produk {
-  color: Cerise;
+  color: #362312;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 5px;
@@ -134,45 +211,6 @@ header {
 
 .produk .btn:hover {
   background-color: black;
-}
-
-
-.main-navigation ul li:hover ul.dropdown {
-  display: block;
-}
-
-
-.search-bar {
-  display: flex;
-  margin-left: 20px;
-}
-
-.search-bar input {
-  padding: 5px;
-  border: none;
-}
-
-.search-bar button {
-  padding: 5px 10px;
-  border: none;
-  background-color: grey;
-  color: black ;
-}
-
-.user-links a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.breadcrumbs {
-  padding: 10px 20px;
-  background-color: #f1ced3;
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #b76e79;
 }
 
 /* === style CSS untuk footer === */
@@ -247,7 +285,7 @@ p.copyright {
   margin-top: 10px;
 }
 
-/* ========== RESPONSIVE STYLES ========== */
+/* ==== RESPONSIVE STYLES ==== */
 
 /* Smartphones (max-width: 767px) */
 @media screen and (max-width: 767px) {
