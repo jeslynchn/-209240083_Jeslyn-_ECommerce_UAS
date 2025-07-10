@@ -1,26 +1,17 @@
-<script>
-  function tambahKeKeranjang() {
-    const namaProduk = "Wardah Perfect Bright Tone Up Micellar Water";
-    const harga = 25800;
-    const jumlah = parseInt(document.getElementById("jumlah").value);
+// Ambil elemen jumlah keranjang dari navbar
+let jumlahKeranjang = 0;
 
-    let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+function tambahKeKeranjang() {
+  // Ambil jumlah dari input
+  const jumlahInput = document.getElementById('jumlah');
+  const jumlah = parseInt(jumlahInput.value);
 
-    const index = keranjang.findIndex(item => item.nama === namaProduk);
+  // Tambahkan ke total
+  jumlahKeranjang += jumlah;
 
-    if (index !== -1) {
-      keranjang[index].jumlah += jumlah;
-    } else {
-      keranjang.push({
-        nama: namaProduk,
-        harga: harga,
-        jumlah: jumlah
-      });
-    }
-    
-    localStorage.setItem("keranjang", JSON.stringify(keranjang));
+  // Update tampilan teks keranjang di header
+  const keranjangTeks = document.querySelector('.user-links a[href="Keranjang.html"]');
+  keranjangTeks.innerHTML = `🛒 Keranjang (${jumlahKeranjang})`;
 
-    // Notifikasi
-    alert("✅ Produk berhasil ditambahkan ke keranjang!");
-  }
-</script>
+  localStorage.setItem('jumlahKeranjang', jumlahKeranjang);
+}
