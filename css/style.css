@@ -177,6 +177,7 @@ header {
   padding: 0 15px;
 }
 
+
 .produk {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -256,15 +257,15 @@ footer {
   background-color: #f9a1a9;
   color: #362312;
   padding: 30px 20px 10px;
-  text-align: center;
+  text-align: align;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 30px;
-  margin-bottom: 20px;
 }
 
 .footer-logo img {
@@ -325,7 +326,7 @@ p.copyright {
 
 /* ==== RESPONSIVE STYLES ==== */
 
-/* Smartphones (max-width: 767px) */
+/* Smartphones */
 @media screen and (max-width: 767px) {
   header {
     flex-direction: column;
@@ -356,7 +357,7 @@ p.copyright {
   }
 }
 
-/* Tablets (min-width: 768px) and up */
+/* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   main {
     flex-direction: row;
@@ -368,10 +369,24 @@ p.copyright {
   }
 }
 
-/* Desktop (min-width: 1200px) */
+/* Desktop */
 @media screen and (min-width: 1200px) {
  
   .product-list {
     width: 75%;
   }
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main.produk-list {
+  flex: 1;
 }
