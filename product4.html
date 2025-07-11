@@ -85,30 +85,6 @@
 </main>
    <div id="notif">Produk berhasil ditambahkan ke keranjang!</div>
 
-<!-- JavaScript untuk keranjang belanja -->
-<script>
-  
-  let totalKeranjang = parseInt(localStorage.getItem("keranjangJumlah")) || 0;
-  document.getElementById("jumlah-keranjang").textContent = totalKeranjang;
-
- function tambahKeKeranjang() {
-  const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
-  totalKeranjang += jumlah;
-  document.getElementById('jumlah-keranjang').textContent = totalKeranjang;
-  localStorage.setItem("keranjangJumlah", totalKeranjang);
-
-  // ubtuk menampilan notifikasi
-  const notif = document.getElementById("notif");
-  notif.style.display = "block";
-
-  setTimeout(() => {
-    notif.style.display = "none";
-  }, 2000); 
-}
-
-</script>
-
-
     <!-- bagian Footer yang berisi informasi penting-->
   <footer>
     <div class="footer-logo">
@@ -152,5 +128,44 @@
   <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
 </footer>
 
+    <!--Javascript untuk keranjang belanja-->
+    <script>
+  let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+  function tambahKeKeranjang() {
+    const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+
+   const produk = {
+  id: 4,
+  name: 'Glad2Glow Cherry Blossom Betaine Micellar Water 300ml',
+  price: 47000,
+  quantity: jumlah,
+  image: "images/Product 4.jpeg"
+};
+
+
+    const existing = keranjang.find(item => item.id === produk.id);
+    if (existing) {
+      existing.quantity += jumlah;
+    } else {
+      keranjang.push(produk);
+    }
+
+    localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+    const totalJumlah = keranjang.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById("jumlah-keranjang").textContent = totalJumlah;
+
+    const notif = document.getElementById("notif");
+    notif.style.display = "block";
+    setTimeout(() => {
+      notif.style.display = "none";
+    }, 2000);
+  }
+
+  document.getElementById("jumlah-keranjang").textContent =
+    keranjang.reduce((total, item) => total + item.quantity, 0);
+</script>
+    
 </body>
 </html>
