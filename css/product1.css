@@ -359,7 +359,7 @@ header {
 
 .item-detail {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   background-color: #ffffff;
   border-left: 6px solid #f9a1a9;
