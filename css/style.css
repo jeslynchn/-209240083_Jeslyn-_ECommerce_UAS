@@ -141,16 +141,6 @@ header {
 
 
 /* === style CSS untuk produk === */
-
-.judul-product {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  color: #ff3b4c;
-  margin: 40px 0 10px;
-  overflow: hidden;
-  white-space: nowrap;
-}
   
 .judul-section {
   text-align: center;
