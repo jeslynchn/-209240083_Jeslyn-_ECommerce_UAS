@@ -147,8 +147,6 @@ header {
   font-weight: bold;
   color: #ff3b4c;
   margin: 40px 0 10px;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .produk-list {
