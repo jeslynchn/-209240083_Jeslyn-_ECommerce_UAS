@@ -142,6 +142,16 @@ header {
 
 /* === style CSS untuk produk === */
 
+.judul-produkhtml {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff3b4c;
+  margin: 40px 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+  
 .judul-section {
   text-align: center;
   font-size: 28px;
@@ -161,6 +171,7 @@ header {
 .produk-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
   gap: 25px;
   margin: 20px 0;
   padding: 0 15px;
