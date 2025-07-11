@@ -141,22 +141,26 @@ header {
 
 
 /* === style CSS untuk produk === */
-.judul-marquee {
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
-  padding: 10px 0; 
-}
 
-.judul-section {
-  display: inline-block;
-  animation: geser 10s linear infinite;
-  white-space: nowrap;
-  color: #ff3b4c;
+.judul-produkhtml {
+  text-align: center;
   font-size: 28px;
   font-weight: bold;
+  color: #ff3b4c;
   margin: 40px 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+  
+.judul-section {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff3b4c;
+  margin: 40px 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: geser 10s linear infinite;
 }
 
 @keyframes geser {
@@ -172,7 +176,6 @@ header {
   margin: 20px 0;
   padding: 0 15px;
 }
-
 
 .produk {
   background-color: #fff;
@@ -193,7 +196,7 @@ header {
 
 .produk img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -259,9 +262,9 @@ footer {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 30px;
+  margin-bottom: 20px;
 }
 
 .footer-logo img {
@@ -371,18 +374,4 @@ p.copyright {
   .product-list {
     width: 75%;
   }
-}
-
-
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main.produk-list {
-  flex: 1;
 }
