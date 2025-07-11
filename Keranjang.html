@@ -44,13 +44,12 @@
 </div>
 
 <!-- Main Keranjang -->
-<main class="produk-list">
-  <div class="produk">
-    <h2 class="judul-produk">Keranjang Belanja Anda</h2>
+<main>
+  <div class="keranjang-container">
+    <h2 class="judul-keranjang">Keranjang Belanja Anda</h2>
     <div id="cart-items"></div>
-    <hr>
-    <p class="harga">Total: <span id="cart-total">Rp 0</span></p>
-    <button class="btn-keranjang" onclick="checkout()">🧾 Checkout Sekarang</button>
+    <p class="total-keranjang">Total: <span id="cart-total">Rp 0</span></p>
+    <button class="btn-checkout" onclick="checkout()">🧾 Checkout Sekarang</button>
   </div>
 </main>
 
@@ -88,56 +87,58 @@
   <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
 </footer>
 
-<!-- Script Dinamis -->
+<!-- Javascript untuk keranjang belanja -->
 <script>
 let cart = JSON.parse(localStorage.getItem('keranjang')) || [];
 
-  function updateCartDisplay() {
-    const cartItems = document.getElementById('cart-items');
-    const cartCount = document.getElementById('jumlah-keranjang');
-    const cartTotal = document.getElementById('cart-total');
+function updateCartDisplay() {
+  const cartItems = document.getElementById('cart-items');
+  const cartCount = document.getElementById('jumlah-keranjang');
+  const cartTotal = document.getElementById('cart-total');
 
-    cartItems.innerHTML = '';
-    let total = 0;
+  cartItems.innerHTML = '';
+  let total = 0;
 
-    cart.forEach(item => {
-      total += item.price * item.quantity;
-      const itemHTML = document.createElement('div');
-      itemHTML.className = 'produk';
-      itemHTML.innerHTML = `
-        <h3 class="judul-produk">${item.name}</h3>
-        <p>Harga Satuan: Rp ${item.price.toLocaleString()}</p>
-        <p>Jumlah: ${item.quantity}</p>
-        <p>Subtotal: Rp ${(item.price * item.quantity).toLocaleString()}</p>
-        <button class="btn-keranjang" onclick="removeFromCart(${item.id})">Hapus</button>
-      `;
-      cartItems.appendChild(itemHTML);
-    });
+  cart.forEach(item => {
+    total += item.price * item.quantity;
+    const itemHTML = document.createElement('div');
+    itemHTML.className = 'item-keranjang';
+    itemHTML.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>Harga Satuan: Rp ${item.price.toLocaleString()}</p>
+      <p>Jumlah: ${item.quantity}</p>
+      <p>Subtotal: Rp ${(item.price * item.quantity).toLocaleString()}</p>
+      <button class="btn-hapus" onclick="removeFromCart(${item.id})">Hapus</button>
+    `;
+    cartItems.appendChild(itemHTML);
+  });
 
+  // Update jumlah keranjang di navbar (jika ada elemennya)
+  if (cartCount) {
     cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartTotal.textContent = `Rp ${total.toLocaleString()}`;
-    localStorage.setItem('cart', JSON.stringify(cart));
   }
 
-  function removeFromCart(id) {
-    cart = cart.filter(item => item.id !== id);
-    updateCartDisplay();
-  }
+  cartTotal.textContent = `Rp ${total.toLocaleString()}`;
+  localStorage.setItem('keranjang', JSON.stringify(cart));
+}
 
-  function checkout() {
-    if (cart.length === 0) {
-      alert("Keranjang kosong. Tambahkan produk terlebih dahulu.");
-      return;
-    }
-    alert("Terima kasih sudah berbelanja di Slyn.Xo!");
-    cart = [];
-    localStorage.removeItem('cart');
-    updateCartDisplay();
-  }
-
-  // Jalankan saat halaman dimuat
+function removeFromCart(id) {
+  cart = cart.filter(item => item.id !== id);
   updateCartDisplay();
-</script>
+}
 
+function checkout() {
+  if (cart.length === 0) {
+    alert("Keranjang kosong. Tambahkan produk terlebih dahulu.");
+    return;
+  }
+  alert("Terima kasih sudah berbelanja di Slyn.Xo!");
+  cart = [];
+  localStorage.removeItem('keranjang');
+  updateCartDisplay();
+}
+
+updateCartDisplay();
+</script>
 </body>
 </html>
