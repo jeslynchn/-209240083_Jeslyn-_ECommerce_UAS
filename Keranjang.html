@@ -103,7 +103,7 @@ function updateCartDisplay() {
     total += item.price * item.quantity;
 
     const itemHTML = document.createElement('div');
-    itemHTML.className = 'item-detail'; // class untuk styling
+    itemHTML.className = 'item-detail'; 
 
     itemHTML.innerHTML = `
       <img src="${item.image}" alt="${item.name}" class="thumbnail">
