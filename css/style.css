@@ -141,11 +141,12 @@ header {
 
 
 /* === style CSS untuk produk === */
-
 .judul-marquee {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  text-align: center;
+  padding: 10px 0; 
 }
 
 .judul-section {
