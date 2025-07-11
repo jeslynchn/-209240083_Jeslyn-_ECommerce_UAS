@@ -101,19 +101,26 @@ function updateCartDisplay() {
 
   cart.forEach(item => {
     total += item.price * item.quantity;
+
     const itemHTML = document.createElement('div');
     itemHTML.className = 'item-keranjang';
-    itemHTML.innerHTML = `
-      <h3>${item.name}</h3>
-      <p>Harga Satuan: Rp ${item.price.toLocaleString()}</p>
-      <p>Jumlah: ${item.quantity}</p>
-      <p>Subtotal: Rp ${(item.price * item.quantity).toLocaleString()}</p>
-      <button class="btn-hapus" onclick="removeFromCart(${item.id})">Hapus</button>
-    `;
+
+   itemHTML.innerHTML = `
+  <h3>${item.name}</h3>
+  <p>Harga Satuan: Rp ${item.price.toLocaleString()}</p>
+  <p>Jumlah:
+    <button class="btn-kurang" onclick="kurangiJumlah(${item.id})">➖</button>
+    <span class="jumlah-produk">${item.quantity}</span>
+    <button class="btn-tambah" onclick="tambahJumlah(${item.id})">➕</button>
+  </p>
+  <p>Subtotal: Rp ${(item.price * item.quantity).toLocaleString()}</p>
+  <button class="btn-hapus" onclick="removeFromCart(${item.id})">Hapus</button>
+`;
+
+
     cartItems.appendChild(itemHTML);
   });
 
-  // Update jumlah keranjang di navbar (jika ada elemennya)
   if (cartCount) {
     cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
   }
@@ -124,6 +131,24 @@ function updateCartDisplay() {
 
 function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id);
+  updateCartDisplay();
+}
+
+function tambahJumlah(id) {
+  const produk = cart.find(item => item.id === id);
+  if (produk) {
+    produk.quantity += 1;
+    updateCartDisplay();
+  }
+}
+
+function kurangiJumlah(id) {
+  const produk = cart.find(item => item.id === id);
+  if (produk && produk.quantity > 1) {
+    produk.quantity -= 1;
+  } else if (produk && produk.quantity === 1) {
+    cart = cart.filter(item => item.id !== id);
+  }
   updateCartDisplay();
 }
 
@@ -140,5 +165,6 @@ function checkout() {
 
 updateCartDisplay();
 </script>
+
 </body>
 </html>
