@@ -148,13 +148,14 @@
   function tambahKeKeranjang() {
     const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
 
-    const produk = {
-      id: 1,
-      name: 'Wardah Perfect Bright Tone Up Micellar Water',
-      price: 25800,
-      quantity: jumlah
-        image: "images/Product 1.jpeg"
-    };
+   const produk = {
+  id: 1,
+  name: 'Wardah Perfect Bright Tone Up Micellar Water',
+  price: 25800,
+  quantity: jumlah,
+  image: "images/Product 1.jpeg"
+};
+
 
     const existing = keranjang.find(item => item.id === produk.id);
     if (existing) {
