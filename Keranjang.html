@@ -8,161 +8,128 @@
 </head>
 <body>
 
-  <!-- Header (sama seperti halaman produk) -->
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="images/company logo.JPG" alt="Company Logo" /></a>
-    </div>
-
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="produk.html">Produk</a>
-          <ul class="dropdown">
-            <li><a href="moisturizer.html">Moisturizer</a></li>
-            <li><a href="micellarWater.html">Micellar Water</a></li>
-            <li><a href="sunscreen.html">Sunscreen</a></li>
-            <li><a href="lipbalm.html">Lip Balm</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="AboutUs.html">About Us</a></li>
-      </ul>
-    </nav>
-
-    <div class="search-bar">
-      <input type="text" placeholder="Search products..." />
-      <button>🔍</button>
-    </div>
-
-    <div class="user-links">
-      <a href="login.html">👤 Login</a>
-      <a href="Keranjang.html">🛒 Keranjang <span id="jumlah-keranjang">3</span></a>
-    </div>
-  </header>
-
-  <!-- Breadcrumb -->
-  <div class="breadcrumbs">
-    <a href="index.html">Home</a> &gt; <span>Keranjang Belanja</span>
+<!-- Header -->
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/company logo.JPG" alt="Company Logo" /></a>
   </div>
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="search-bar">
+    <input type="text" placeholder="Search products...">
+    <button>🔍</button>
+  </div>
+  <div class="user-links">
+    <a href="login.html">👤 Login</a>
+    <a href="keranjang.html">🛒 Keranjang <span id="jumlah-keranjang">0</span></a>
+  </div>
+</header>
 
-  <!-- Main Content -->
-  <main class="produk-list">
-    <div class="produk">
-      <h2 class="judul-produk">Keranjang Belanja Anda</h2>
+<!-- Breadcrumb -->
+<div class="breadcrumbs">
+  <a href="index.html">Home</a> &gt; <span>Keranjang Belanja</span>
+</div>
 
-      <!-- Produk di Keranjang -->
-      <div class="produk" data-harga="25800" data-id="produk1">
-        <img src="images/Product 1.jpeg" alt="Wardah Perfect Bright">
-          <h3 class="judul-produk">Wardah Perfect Bright Micellar Water</h3>
-            <p>Harga: <strong>Rp 25.800</strong></p>
-              <form class="form-keranjang">
-                <label for="qty1">Jumlah:</label>
-          <input type="number" class="jumlah" min="1" value="1">
-        </form>
-      </div>
+<!-- Main Keranjang -->
+<main class="produk-list">
+  <div class="produk">
+    <h2 class="judul-produk">Keranjang Belanja Anda</h2>
+    <div id="cart-items"></div>
+    <hr>
+    <p class="harga">Total: <span id="cart-total">Rp 0</span></p>
+    <button class="btn-keranjang" onclick="checkout()">🧾 Checkout Sekarang</button>
+  </div>
+</main>
 
-    <div class="produk" data-harga="139000" data-id="produk2">
-    <img src="images/Product 2.jpeg" alt="Dreamy Moisturizer">
-     <h3 class="judul-produk">Glowies Dreamy Moisturizer</h3>
-       <p>Harga: <strong>Rp 139.000</strong></p>
-          <form class="form-keranjang">
-        <label for="qty2">Jumlah:</label>
-        <input type="number" class="jumlah" min="1" value="2">
+<!-- Notifikasi -->
+<div id="notif">🛒 Produk berhasil ditambahkan ke keranjang!</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <a href="index.html">
+      <img src="images/company logo.JPG" alt="Company Logo" />
+    </a>
+  </div>
+  <div class="footer-container">
+    <div class="contact">
+      <h3>Contact</h3><hr />
+      <p><strong>✉️ Email:</strong> celinjeslyn@gmail.com</p>
+      <p><strong>📍 Alamat:</strong> Jl. Taman Holis Indah No.9, Bandung</p>
+      <p><strong>📞 Phone:</strong> 0896-3897-3459</p>
+    </div>
+    <div class="newsletter-signup">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
       </form>
     </div>
-      <!-- Total dan Checkout -->
-    <hr>
-    <p class="harga" id="total-harga">Total: <strong>Rp 303.800</strong></p>
-    <button class="btn-keranjang" onclick="checkout()">🧾 Checkout Sekarang</button>
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <a href="https://www.instagram.com/jslynchn"><img src="images/Logo ig.jpeg" alt="Instagram" /></a>
+      <a href="https://vm.tiktok.com/ZSrXuLcAr/"><img src="images/Logo TT.jpeg" alt="TikTok" /></a>
+      <a href="https://web.facebook.com/celin.jeslyn"><img src="images/Logo Fb.jpeg" alt="Facebook" /></a>
     </div>
-  </main>
+  </div>
+  <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
+</footer>
 
-  <!-- Notifikasi -->
-  <div id="notif">🛒 Produk berhasil ditambahkan ke keranjang!</div>
+<!-- Script Dinamis -->
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">
-      <a href="index.html">
-        <img src="images/company logo.JPG" alt="Company Logo" />
-      </a>
-    </div>
+  function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('jumlah-keranjang');
+    const cartTotal = document.getElementById('cart-total');
 
-    <div class="footer-container">
-      <div class="contact">
-        <h3>Contact</h3>
-        <hr />
-        <p><strong>✉️ Email:</strong> celinjeslyn@gmail.com</p>
-        <p><strong>📍 Alamat:</strong> Jl. Taman Holis Indah No.9, Bandung</p>
-        <p><strong>📞 Phone:</strong> 0896-3897-3459</p>
-      </div>
-
-      <div class="newsletter-signup">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form>
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-
-      <div class="social-media">
-        <h3>Follow Us</h3>
-        <a href="https://www.instagram.com/jslynchn?igsh=Z3RobzRtNjA3YjEx">
-          <img src="images/Logo ig.jpeg" alt="Instagram" />
-        </a>
-        <a href="https://vm.tiktok.com/ZSrXuLcAr/">
-          <img src="images/Logo TT.jpeg" alt="TikTok" />
-        </a>
-        <a href="https://web.facebook.com/celin.jeslyn">
-          <img src="images/Logo Fb.jpeg" alt="Facebook" />
-        </a>
-      </div>
-    </div>
-
-    <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
-  </footer>
-
-  <script>
-  function formatRupiah(angka) {
-    return new Intl.NumberFormat("id-ID", {
-      style: "currency",
-      currency: "IDR",
-      minimumFractionDigits: 0,
-    }).format(angka);
-  }
-
-  function hitungTotal() {
+    cartItems.innerHTML = '';
     let total = 0;
-    document.querySelectorAll(".produk").forEach(produk => {
-      const harga = parseInt(produk.getAttribute("data-harga"));
-      const input = produk.querySelector(".jumlah");
-      const jumlah = parseInt(input.value);
 
-      // Jika jumlah kosong atau 0, hapus elemen produk
-      if (jumlah <= 0) {
-        produk.remove();
-      } else {
-        total += harga * jumlah;
-      }
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+      const itemHTML = document.createElement('div');
+      itemHTML.className = 'produk';
+      itemHTML.innerHTML = `
+        <h3 class="judul-produk">${item.name}</h3>
+        <p>Harga Satuan: Rp ${item.price.toLocaleString()}</p>
+        <p>Jumlah: ${item.quantity}</p>
+        <p>Subtotal: Rp ${(item.price * item.quantity).toLocaleString()}</p>
+        <button class="btn-keranjang" onclick="removeFromCart(${item.id})">Hapus</button>
+      `;
+      cartItems.appendChild(itemHTML);
     });
 
-    document.getElementById("total-harga").innerHTML = `Total: <strong>${formatRupiah(total)}</strong>`;
-    document.getElementById("jumlah-keranjang").textContent = document.querySelectorAll(".produk").length;
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartTotal.textContent = `Rp ${total.toLocaleString()}`;
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 
-  // Event saat input jumlah berubah
-  document.querySelectorAll(".jumlah").forEach(input => {
-    input.addEventListener("input", hitungTotal);
-  });
+  function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCartDisplay();
+  }
 
-  // Fungsi saat checkout diklik
   function checkout() {
-    alert("Checkout berhasil! Terima kasih telah berbelanja di Slyn.Xo 🛍️");
+    if (cart.length === 0) {
+      alert("Keranjang kosong. Tambahkan produk terlebih dahulu.");
+      return;
+    }
+    alert("Terima kasih sudah berbelanja di Slyn.Xo!");
+    cart = [];
+    localStorage.removeItem('cart');
+    updateCartDisplay();
   }
 
-  // Hitung total awal
-  hitungTotal();
+  // Jalankan saat halaman dimuat
+  updateCartDisplay();
 </script>
 
 </body>
