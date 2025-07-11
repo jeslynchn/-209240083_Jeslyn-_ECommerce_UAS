@@ -141,15 +141,21 @@ header {
 
 
 /* === style CSS untuk produk === */
+
+.judul-marquee {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 .judul-section {
-  text-align: center;
+  display: inline-block;
+  animation: geser 10s linear infinite;
+  white-space: nowrap;
+  color: #ff3b4c;
   font-size: 28px;
   font-weight: bold;
-  color: #ff3b4c;
   margin: 40px 0 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: geser 10s linear infinite;
 }
 
 @keyframes geser {
