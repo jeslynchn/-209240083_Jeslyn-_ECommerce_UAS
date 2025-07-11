@@ -357,23 +357,58 @@ header {
   margin-bottom: 30px;
 }
 
-.item-keranjang {
+.item-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
   background-color: #ffffff;
   border-left: 6px solid #f9a1a9;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
 }
 
-.item-keranjang h3 {
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
   color: #b01757;
   margin-bottom: 10px;
 }
 
-.item-keranjang p {
+.item-info p {
   margin: 6px 0;
   font-size: 0.95rem;
+}
+
+/* Tombol tambah/kurang/hapus */
+.btn-kurang,
+.btn-tambah {
+  padding: 4px 10px;
+  margin: 0 5px;
+  background-color: #f9a1a9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-kurang:hover,
+.btn-tambah:hover {
+  background-color: #c94c5b;
 }
 
 .btn-hapus {
@@ -390,6 +425,11 @@ header {
 
 .btn-hapus:hover {
   background-color: #d32f2f;
+}
+
+.jumlah-produk {
+  font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .total-keranjang {
@@ -416,53 +456,6 @@ header {
 
 .btn-checkout:hover {
   background-color: #a92f3d;
-}
-
-/* ==== Tombol Jumlah Produk di Keranjang ==== */
-.btn-kurang,
-.btn-tambah {
-  padding: 4px 10px;
-  margin: 0 5px;
-  background-color: #f9a1a9;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-kurang:hover,
-.btn-tambah:hover {
-  background-color: #c94c5b;
-}
-
-.jumlah-produk {
-  font-weight: bold;
-  font-size: 0.95rem;
-}
-.item-detail {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #fff0f3;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.thumbnail {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-.item-info {
-  flex: 1;
 }
 
 
