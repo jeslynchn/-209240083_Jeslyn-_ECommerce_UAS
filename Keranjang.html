@@ -72,9 +72,9 @@
       </form>
     </div>
       <!-- Total dan Checkout -->
-      <hr>
-      <p class="harga">Total: <strong>Rp 303.800</strong></p>
-      <button class="btn-keranjang">🧾 Checkout Sekarang</button>
+    <hr>
+    <p class="harga" id="total-harga">Total: <strong>Rp 303.800</strong></p>
+    <button class="btn-keranjang" onclick="checkout()">🧾 Checkout Sekarang</button>
     </div>
   </main>
 
@@ -122,6 +122,48 @@
 
     <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
   </footer>
+
+  <script>
+  function formatRupiah(angka) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(angka);
+  }
+
+  function hitungTotal() {
+    let total = 0;
+    document.querySelectorAll(".produk").forEach(produk => {
+      const harga = parseInt(produk.getAttribute("data-harga"));
+      const input = produk.querySelector(".jumlah");
+      const jumlah = parseInt(input.value);
+
+      // Jika jumlah kosong atau 0, hapus elemen produk
+      if (jumlah <= 0) {
+        produk.remove();
+      } else {
+        total += harga * jumlah;
+      }
+    });
+
+    document.getElementById("total-harga").innerHTML = `Total: <strong>${formatRupiah(total)}</strong>`;
+    document.getElementById("jumlah-keranjang").textContent = document.querySelectorAll(".produk").length;
+  }
+
+  // Event saat input jumlah berubah
+  document.querySelectorAll(".jumlah").forEach(input => {
+    input.addEventListener("input", hitungTotal);
+  });
+
+  // Fungsi saat checkout diklik
+  function checkout() {
+    alert("Checkout berhasil! Terima kasih telah berbelanja di Slyn.Xo 🛍️");
+  }
+
+  // Hitung total awal
+  hitungTotal();
+</script>
 
 </body>
 </html>
