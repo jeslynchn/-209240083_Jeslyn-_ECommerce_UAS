@@ -31,11 +31,10 @@
     </ul>
   </nav>
 
-  <!-- Search Bar -->
-  <div class="search-bar">
-    <input type="text" placeholder="Search products...">
-    <button>🔍</button>
-  </div>
+ <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <button id="searchButton">🔍</button>
+</div>
 
   <!-- Login & Keranjang -->
   <div class="user-links">
@@ -165,6 +164,29 @@
   const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
   document.getElementById("jumlah-keranjang").textContent =
     keranjang.reduce((total, item) => total + item.quantity, 0);
+        
+  // javascript untuk search button agar berfungsi \\
+  document.getElementById("searchButton").addEventListener("click", function () {
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    const produkList = document.querySelectorAll(".produk");
+
+    produkList.forEach(function (produk) {
+      const judul = produk.querySelector(".judul-produk").textContent.toLowerCase();
+
+      if (judul.includes(keyword)) {
+        produk.style.display = "block";
+      } else {
+        produk.style.display = "none";
+      }
+    });
+  });
+
+  // Fungsi java script agar tekan Enter juga bisa berjalan\\
+  document.getElementById("searchInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      document.getElementById("searchButton").click();
+    }
+  });
 </script>
 
 </body>
