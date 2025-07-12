@@ -250,6 +250,72 @@ header {
   background-color: black;
 }
 
+/* === style CSS untuk halaman login === */
+
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffe4ec;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(255, 0, 102, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  color: #ff3b80;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 6px;
+  color: #b8005b;
+  font-weight: 600;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ffb6c1;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ff4d94;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #ff1493;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
 
 /* === style CSS untuk footer === */
 footer {
