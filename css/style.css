@@ -5,7 +5,6 @@ body {
   padding: 0;
 }
 
-/* Header utama */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -50,12 +49,40 @@ header {
   background-color: #ffd6db;
 }
 
+/* Dropdown Menu */
+.main-navigation ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 160px;
+  padding: 10px 0;
+  background-color: #e299a1;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.main-navigation ul li:hover ul.dropdown {
+  display: block;
+}
+
+.main-navigation ul li ul.dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.main-navigation ul li ul.dropdown li a:hover {
+  background-color: #ffd6db;
+}
+
 /* Search */
 .search-bar {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 300px; 
   border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
@@ -63,23 +90,18 @@ header {
 }
 
 .search-bar input {
-  flex: 1; 
   border: none;
-  padding: 6px 12px; 
+  padding: 6px 12px;
   outline: none;
 }
 
 .search-bar button {
   border: none;
   background: #f9a1a9;
-  padding: 6px 12px; 
+  padding: 6px 12px;
   cursor: pointer;
   color: white;
   font-weight: bold;
-}
-
-.search-bar button:hover {
-  background-color: #f67280;
 }
 
 /* Login dan Keranjang */
@@ -116,37 +138,6 @@ header {
   color: #b76e79;
   font-weight: 500;
 }
-
-/* Dropdown Menu */
-.main-navigation ul li ul.dropdown {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  min-width: 160px;
-  padding: 10px 0;
-  background-color: #e299a1;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-}
-
-.main-navigation ul li:hover ul.dropdown {
-  display: block;
-}
-
-.main-navigation ul li ul.dropdown li a {
-  display: block;
-  padding: 10px 16px;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.main-navigation ul li ul.dropdown li a:hover {
-  background-color: #ffd6db;
-}
-
 /* === style CSS untuk produk === */
 
 .judul-produkhtml {
