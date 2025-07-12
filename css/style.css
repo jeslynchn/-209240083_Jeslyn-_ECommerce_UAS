@@ -8,12 +8,13 @@ body {
 /* Header utama */
 header {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
   background: linear-gradient(to right, #f9a1a9, #fcd5ce);
-  padding: 20px 20px 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  gap: 15px;
 }
 
 /* Logo */
@@ -21,32 +22,6 @@ header {
   width: 170px;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Login & Keranjang */
-.user-links {
-  position: absolute;
-  top: 15px;
-  left: 30px;
-  display: flex;
-  gap: 15px;
-}
-
-.user-links a {
-  color: #5a2a27;
-  text-decoration: none;
-  font-weight: bold;
-  background: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid #f3b0b8;
-  transition: background 0.3s;
-}
-
-.user-links a:hover {
-  background-color: grey;
-  transition: background-color 0.3s ease;
 }
 
 /* Navigation Menu */
@@ -56,8 +31,6 @@ header {
   padding: 0;
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .main-navigation ul li {
@@ -77,39 +50,58 @@ header {
   background-color: #ffd6db;
 }
 
+/* Search */
 .search-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px; 
   border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
   background: white;
-  margin-top: 15px;
 }
 
 .search-bar input {
-  flex: 1;
+  flex: 1; 
   border: none;
-  padding: 10px 14px;
+  padding: 6px 12px; 
   outline: none;
-  font-size: 16px;
 }
 
 .search-bar button {
   border: none;
   background: #f9a1a9;
-  padding: 10px 16px;
+  padding: 6px 12px; 
   cursor: pointer;
   color: white;
   font-weight: bold;
-  font-size: 16px;
 }
 
 .search-bar button:hover {
   background-color: #f67280;
+}
+
+/* Login dan Keranjang */
+.user-links {
+  display: flex;
+  gap: 15px;
+}
+
+.user-links a {
+  color: #5a2a27;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #f3b0b8;
+  transition: background 0.3s;
+}
+
+.user-links a:hover {
+  background-color: grey;
+  transition: background-color 0.3s ease
 }
 
 /* Breadcrumbs */
