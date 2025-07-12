@@ -89,26 +89,22 @@ header {
   border-radius: 20px;
   overflow: hidden;
   background: white;
-  margin: 10px auto; 
 }
 
 .search-bar input {
   flex: 1; 
   border: none;
-  padding: 10px 14px; 
-  font-size: 16px;
+  padding: 6px 12px; 
   outline: none;
 }
 
 .search-bar button {
   border: none;
   background: #f9a1a9;
-  padding: 10px 16px; 
+  padding: 6px 12px; 
   cursor: pointer;
   color: white;
   font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .search-bar button:hover {
