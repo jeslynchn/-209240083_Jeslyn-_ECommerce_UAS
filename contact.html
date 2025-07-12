@@ -118,5 +118,12 @@
   <p class="copyright">© 2025 Slyn.Xo - All Rights Reserved</p>
 </footer>
 
+<!-- javascript untuk keranjang agar terintegrasi-->
+    <script>
+  const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+  document.getElementById("jumlah-keranjang").textContent =
+    keranjang.reduce((total, item) => total + item.quantity, 0);
+    </script>
+    
 </body>
 </html>
