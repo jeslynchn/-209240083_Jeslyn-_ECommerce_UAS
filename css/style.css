@@ -83,25 +83,36 @@ header {
 .search-bar {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 300px; 
   border: 1px solid #ccc;
   border-radius: 20px;
   overflow: hidden;
   background: white;
+  margin: 10px auto; 
 }
 
 .search-bar input {
+  flex: 1; 
   border: none;
-  padding: 6px 12px;
+  padding: 10px 14px; 
+  font-size: 16px;
   outline: none;
 }
 
 .search-bar button {
   border: none;
   background: #f9a1a9;
-  padding: 6px 12px;
+  padding: 10px 16px; 
   cursor: pointer;
   color: white;
   font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #f67280;
 }
 
 /* Login dan Keranjang */
@@ -391,21 +402,26 @@ p.copyright {
 
 /* ==== RESPONSIVE STYLES ==== */
 
-/* Smartphones */
 @media screen and (max-width: 767px) {
-  header {
+  header, footer {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
   }
 
   .main-navigation ul {
+    display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .search-bar {
     width: 100%;
+    max-width: 100%;
     margin-top: 10px;
+    flex-direction: row;
   }
 
   .user-links {
@@ -413,12 +429,7 @@ p.copyright {
   }
 
   main {
-    flex-direction: column;
     padding: 10px;
-  }
-
-  footer {
-    flex-direction: column;
   }
 }
 
