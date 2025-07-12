@@ -288,7 +288,7 @@ header {
 }
 
 .login-button {
-  background-color: #ff69b4;
+  background-color: #ed64b8;
   color: white;
   padding: 12px;
   border: none;
@@ -299,7 +299,7 @@ header {
 }
 
 .login-button:hover {
-  background-color: #ff4d94;
+  background-color: crimson;
 }
 
 .register-link {
@@ -309,7 +309,7 @@ header {
 }
 
 .register-link a {
-  color: #ff1493;
+  color: #1462ff;
   text-decoration: none;
 }
 
